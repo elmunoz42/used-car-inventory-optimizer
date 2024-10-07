@@ -2,6 +2,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import numpy as np
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 
 def plot_dataframe_missing_values(dataframe, filepath):
     # Gets the mean of missing values in each column. Since True = 1 and False = 0 the mean tells us how much of the data is missing.
@@ -70,3 +74,24 @@ def identify_feature_types(df):
         categorical_features.remove(target_variable)
     
     return numeric_features, categorical_features
+
+def mse_for_different_degrees(X,y,range_low, range_stop):
+    mses = []
+    for i in range(range_low,range_stop):
+    #for 1, 2, 3, ...
+
+        #create pipeline
+        pipeline = Pipeline([
+            ('features', PolynomialFeatures(degree=i, include_bias=False)),
+            ('model', LinearRegression())
+        ])
+        #fit pipeline
+        pipeline.fit(X,y)
+        #make predictions
+        predictions = pipeline.predict(X)
+        #compute mse
+        mse = mean_squared_error(y,predictions)
+        #append mse to mses
+        mses.append(mse)
+        
+    return mses
