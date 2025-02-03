@@ -7,6 +7,26 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
+def identify_variable_types(df, ordinal_features=[]):
+    # Get initial classification
+    numerical = df.select_dtypes(include=['int64', 'float64']).columns
+    categorical = df.select_dtypes(include=['object', 'category']).columns
+    
+    # Convert to lists for easier manipulation
+    numerical = list(numerical)
+    categorical = list(categorical)
+    
+    # Remove ordinal features from numerical and categorical lists
+    for feature in ordinal_features:
+        if feature in numerical:
+            numerical.remove(feature)
+        if feature in categorical:
+            categorical.remove(feature)
+    
+    print("Numerical features:", numerical)
+    print("Categorical features:", categorical)
+    print("Ordinal features:", ordinal_features)
+
 def plot_dataframe_missing_values(dataframe, filepath):
     # Gets the mean of missing values in each column. Since True = 1 and False = 0 the mean tells us how much of the data is missing.
     missing_values = dataframe.isnull().mean().sort_values(ascending=False)
