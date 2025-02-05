@@ -6,6 +6,8 @@ The main file to review which has the Jupyter Notebook with the models and visua
 
 This README file contains the same findings in a summarized format, the prompt_II.ipynb file however is much more informative.
 
+Please note also that some functions that are common data visualization or preparation processes are saved to a separate functions.py file.
+
 ## Business Understanding
 
 ### Understanding The Busines Context:
