@@ -1,5 +1,11 @@
 # Practical Application Assignment 11.1: What Drives the Price of a Car?
 
+## About this Repository:
+
+The main file to review which has the Jupyter Notebook with the models and visualizations is https://github.com/elmunoz42/used-car-inventory-optimizer/blob/main/prompt_II.ipynb 
+
+This README file contains the same findings in a summarized format, the prompt_II.ipynb file however is much more informative.
+
 ## Business Understanding
 
 ### Understanding The Busines Context:
