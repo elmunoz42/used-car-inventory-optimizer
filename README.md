@@ -67,7 +67,7 @@ With your (almost?) final dataset in hand, it is now time to build some models. 
 
 Model-Specific Precision Pricing
 
-Focus on 3 popular models by sample size:
+Focus on 1 popular model by sample size:
 Model	Sample Size
 F-150	583
 Accord	474
