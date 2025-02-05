@@ -136,7 +136,9 @@ Would you like us to finalize this feature build and schedule a demonstration of
 
 Best regards, Carlos Munoz Kampff
 
-P.S. Remember that while this model is quite accurate for typical F-150s, you might want to do additional research when pricing particularly unique or modified trucks, as these fall outside our model's most accurate prediction range. P.S2. See attached our recommendations.
+P.S. Remember that while this model is quite accurate for typical F-150s, you might want to do additional research when pricing particularly unique or modified trucks, as these fall outside our model's most accurate prediction range. 
+
+P.S2. See attached our recommendations for next steps.
 
 #### Recommendations Attachment
 
@@ -155,4 +157,4 @@ You can see a mockup of this feature here: https://claude.site/artifacts/f542a4e
 
 Alternatively, if they wanted a more accurate model the form could have these 11 features: https://claude.site/artifacts/4ec68155-53e2-41ee-bbd2-02b1e7faa778
 
-Please note that these are mockups and not yet connected to a calculating backend yet.
+Please note that these are mockups and not yet connected to a calculating backend.
